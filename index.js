@@ -5,7 +5,6 @@ const router = require("./src/routes/index");
 const PurchaseOrder = require("./src/models/purchaseOrder.model");
 const PurchaseOrderDetail = require("./src/models/purchaseOrderDetail.model");
 const { seedGeographicEntities } = require("./src/seeders/geographic_entity/seedGeographicEntities");
-const sequelize = require("./src/config/db.config");
 require("./src/config/db.config");
 
 const app = express();
@@ -22,11 +21,10 @@ app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
 });
 
-
 setTimeout(() => {
-    seedGeographicEntities(sequelize);
-}, 2000);
-// const {
-//     seedGeographicEntities,
-// } = require("./src/seeders/geographic_entity/seedGeographicEntities");
-// seedGeographicEntities();
+    
+    seedGeographicEntities();
+
+  }, 2000);
+
+
