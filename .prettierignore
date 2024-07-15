@@ -1,8 +1,0 @@
-/.vscode
-/node_modules
-./dist
-
-readme.md
-*.env
-.env
-.env.*
